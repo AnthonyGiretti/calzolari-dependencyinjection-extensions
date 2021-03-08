@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>3.1</Version>
+    <Authors>Anthony Giretti</Authors>
+    <Company>Calzolari</Company>
+    <Product>Calzolari.DependencyInjection.Extensions</Product>
+    <Description>Extensions to manage registered instance</Description>
+    <PackageProjectUrl>https://github.com/AnthonyGiretti/calzolari-dependencyinjection-extensions</PackageProjectUrl>
+    <PackageLicenseFile>license.txt</PackageLicenseFile>
+    <PackageTags>dotnet;IServiceCollection</PackageTags>
+    <RepositoryUrl>https://github.com/AnthonyGiretti/calzolari-dependencyinjection-extensions</RepositoryUrl>
+    <PackageIcon>calzolari.png</PackageIcon>
+    <PackageIconUrl />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.12" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\calzolari.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="..\license.txt">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
