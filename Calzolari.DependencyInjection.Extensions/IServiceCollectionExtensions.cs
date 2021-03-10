@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Calzolari.DependencyInjection.Extensions
@@ -36,6 +37,22 @@ namespace Calzolari.DependencyInjection.Extensions
         {
             services.Unregister<TService>();
             services.AddSingleton<TService, TImplementation>();
+        }
+
+        public static void RegisterOptions<TOptions>(this IServiceCollection services, IConfiguration configuration) where TOptions : class, new()
+        {
+            var options = new TOptions();
+            configuration.Bind(typeof(TOptions).Name, options);
+
+            services.AddSingleton(options);
+        }
+
+        public static void RegisterOptions<TOptions>(this IServiceCollection services, IConfiguration configuration, string name) where TOptions : class, new()
+        {
+            var options = new TOptions();
+            configuration.Bind(name, options);
+
+            services.AddSingleton(options);
         }
     }
 }
