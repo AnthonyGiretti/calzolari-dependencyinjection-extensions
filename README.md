@@ -1,7 +1,7 @@
 # calzolari-dependencyinjection-extensions
 Extensions for ASP.NET Core dependency injection
 
-```
+```csharp
 public void ConfigureServices(IServiceCollection services)
 {
 
